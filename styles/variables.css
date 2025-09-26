@@ -12,9 +12,9 @@ To adjust logo spacing and size, modify these values:
   --logo-spacing: 3px; /* Adjustable gap between logo and author name */
   --logo-height: 18px; /* Uniform height for all logos */
   --title-logo-size: 1em; /* Size of logo in main title */
-  --hero-top-gap: 4rem; /* Gap between title and top of webpage - increased from default */
+  --hero-top-gap: 2rem; /* Gap between title and top of webpage - increased from default */
   --publication-title-size: clamp(2.5rem, 5vw, 3.5rem); /* Main title font size */
-  --publication-subtitle-size: clamp(1.5rem, 3vw, 1.8rem); /* Subtitle font size */
+  --publication-subtitle-size: clamp(1.8rem, 3.5vw, 2.2rem); /* Subtitle font size - increased */
 }
 
 /* Global font settings */
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .title {
 .title-logo {
   width: var(--title-logo-size);
   height: auto;
-  vertical-align: middle;
+  vertical-align: top; /* Changed from middle to top to move logo upward */
 }
 
 .author-logo {
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6, .title {
 
 /* Hero sections without extra gap */
 .hero.no-extra-gap {
-  padding-top: 1.5rem !important;
+  padding-top: 1rem !important;
 }
 
 /* Utility classes */
@@ -86,12 +86,12 @@ h1, h2, h3, h4, h5, h6, .title {
   flex-wrap: wrap;
   justify-content: center;
   gap: 18px; /* Increased gap for better readability */
-  margin-bottom: 25px;
-  line-height: 2;
+  margin-bottom: 50px;
+  line-height: 0.5; /* Reduced from 2 for tighter spacing */
 }
 
 .author-item {
-  font-size: 1.1rem; /* Increased from 1rem */
+  font-size: 1.3rem; /* Increased from 1.1rem for larger text */
   color: #333;
 }
 
@@ -99,31 +99,31 @@ h1, h2, h3, h4, h5, h6, .title {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px; /* Increased gap for better readability */
+  gap: 15px; /* Increased gap for better readability */
   margin: 20px 0;
-  line-height: 2.5;
+  line-height: 0.5; /* Reduced from 2.5 for tighter spacing */
 }
 
 .institution-item {
   display: inline-flex;
   align-items: center;
-  font-size: 1rem; /* Increased from 0.9rem */
+  font-size: 1.2rem; /* Increased from 1rem for larger text */
   color: #333;
   gap: 6px;
 }
 
 .institution-logo {
-  width: 20px;
   height: 20px;
+  width: auto; /* Maintains aspect ratio */
   vertical-align: middle;
-  margin-right: 4px;
+  margin-right: 1px;
 }
 
 .notes-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 0px;
   margin: 25px 0;
   font-size: 1.05rem; /* Slightly larger for better visibility */
   color: #555;
