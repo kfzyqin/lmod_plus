@@ -1,0 +1,141 @@
+/* CSS Variables for adjustable settings */
+/*
+To adjust logo spacing and size, modify these values:
+--logo-spacing: Controls gap between logo and author name (e.g., 2px, 5px, 8px)
+--logo-height: Controls uniform height for all logos (e.g., 16px, 20px, 24px)
+--title-logo-size: Controls size of logo in main title (e.g., 0.8em, 1.2em, 1.5em)
+--hero-top-gap: Controls gap between title and top of webpage (e.g., 3rem, 5rem, 8rem)
+--publication-title-size: Controls main title font size (e.g., 2.5rem, 3.5rem, 4rem)
+--publication-subtitle-size: Controls subtitle font size (e.g., 1.5rem, 1.8rem, 2rem)
+*/
+:root {
+  --logo-spacing: 3px; /* Adjustable gap between logo and author name */
+  --logo-height: 18px; /* Uniform height for all logos */
+  --title-logo-size: 1em; /* Size of logo in main title */
+  --hero-top-gap: 4rem; /* Gap between title and top of webpage - increased from default */
+  --publication-title-size: clamp(2.5rem, 5vw, 3.5rem); /* Main title font size */
+  --publication-subtitle-size: clamp(1.5rem, 3vw, 1.8rem); /* Subtitle font size */
+}
+
+/* Global font settings */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Headlines use YaleDisplay-Roman */
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'YaleDisplay-Roman', serif !important;
+}
+
+/* Adjustable title and subtitle font sizes */
+.publication-title {
+  font-size: var(--publication-title-size) !important;
+  line-height: 1.2;
+}
+
+.publication-subtitle {
+  font-size: var(--publication-subtitle-size) !important;
+  line-height: 1.3;
+}
+
+/* Logo styling */
+.title-logo {
+  width: var(--title-logo-size);
+  height: auto;
+  vertical-align: middle;
+}
+
+.author-logo {
+  height: var(--logo-height);
+  width: auto; /* Maintains aspect ratio */
+  vertical-align: middle;
+  margin-right: var(--logo-spacing);
+}
+
+/* Hero section with adjustable top gap */
+.hero {
+  padding-top: var(--hero-top-gap) !important;
+}
+
+/* Hero sections without extra gap */
+.hero.no-extra-gap {
+  padding-top: 1.5rem !important;
+}
+
+/* Utility classes */
+.hidden {
+  display: none;
+}
+
+.no-sort {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+.no-sort:hover {
+  background-color: inherit !important;
+}
+
+/* New Clean Layout Styles */
+.authors-section {
+  margin: 35px 0; /* Increased margin for better spacing from title */
+}
+
+.authors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px; /* Increased gap for better readability */
+  margin-bottom: 25px;
+  line-height: 2;
+}
+
+.author-item {
+  font-size: 1.1rem; /* Increased from 1rem */
+  color: #333;
+}
+
+.institutions-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* Increased gap for better readability */
+  margin: 20px 0;
+  line-height: 2.5;
+}
+
+.institution-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem; /* Increased from 0.9rem */
+  color: #333;
+  gap: 6px;
+}
+
+.institution-logo {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.notes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 25px 0;
+  font-size: 1.05rem; /* Slightly larger for better visibility */
+  color: #555;
+}
+
+.note-item {
+  color: #555;
+  font-weight: 500; /* Slightly bolder for better readability */
+}
+
+.author-item sup,
+.institution-item sup {
+  font-size: 0.75em;
+  margin-left: 2px;
+}

@@ -1,0 +1,7 @@
+/* Custom Font Face for YaleDisplay-Roman */
+@font-face {
+  font-family: 'YaleDisplay-Roman';
+  src: url('../assets/fonts/YaleDisplay-Roman.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
